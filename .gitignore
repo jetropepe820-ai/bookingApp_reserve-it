@@ -1,0 +1,5 @@
+/storage/app.log
+/storage/mail/outbox.log
+/storage/throttle/*.json
+/storage/court-photos/*
+!/storage/court-photos/.gitkeep

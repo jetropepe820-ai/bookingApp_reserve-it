@@ -1,0 +1,4 @@
+INSERT IGNORE INTO courts (name, sport, description, hourly_rate, image_url, opens_at, closes_at, is_active, created_at) VALUES
+('Basketball Court A', 'Basketball', 'A full-size, well-lit court with polished hardwood and room for your crew.', 500.00, 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=85', '06:00', '22:00', 1, NOW()),
+('Badminton Court B', 'Badminton', 'A bright indoor court with tournament-grade flooring.', 200.00, 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1000&q=85', '06:00', '22:00', 1, NOW()),
+('Volleyball Court C', 'Volleyball', 'A spacious court for practice, friendly matches, and league play.', 350.00, 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1000&q=85', '06:00', '22:00', 1, NOW());

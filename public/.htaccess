@@ -1,0 +1,21 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteRule ^api/v1/auth/login/?$ index.php?r=api.v1.auth.login [QSA,L]
+RewriteRule ^api/v1/auth/register/?$ index.php?r=api.v1.auth.register [QSA,L]
+RewriteRule ^api/v1/auth/logout/?$ index.php?r=api.v1.auth.logout [QSA,L]
+RewriteRule ^api/v1/courts/?$ index.php?r=api.v1.courts [QSA,L]
+RewriteRule ^api/v1/courts/([0-9]+)/availability/?$ index.php?r=api.v1.court.availability&court_id=$1 [QSA,L]
+RewriteRule ^api/v1/bookings/?$ index.php?r=api.v1.bookings [QSA,L]
+RewriteRule ^api/v1/bookings/([0-9]+)/cancel/?$ index.php?r=api.v1.booking.cancel&booking_id=$1 [QSA,L]
+RewriteRule ^api/v1/bookings/([0-9]+)/?$ index.php?r=api.v1.booking.item&booking_id=$1 [QSA,L]
+RewriteRule ^api/v1/admin/courts/?$ index.php?r=api.v1.admin.courts [QSA,L]
+RewriteRule ^api/v1/admin/courts/([0-9]+)/?$ index.php?r=api.v1.admin.court.update&court_id=$1 [QSA,L]
+RewriteRule ^api/v1/admin/courts/([0-9]+)/deactivate/?$ index.php?r=api.v1.admin.court.deactivate&court_id=$1 [QSA,L]
+RewriteRule ^api/v1/admin/maintenance/?$ index.php?r=api.v1.admin.maintenance.add [QSA,L]
+RewriteRule ^api/v1/admin/maintenance/([0-9]+)/?$ index.php?r=api.v1.admin.maintenance.delete&block_id=$1 [QSA,L]
+<FilesMatch "^(\.env|config\.local\.php|.*\.sql)$">
+    Require all denied
+</FilesMatch>

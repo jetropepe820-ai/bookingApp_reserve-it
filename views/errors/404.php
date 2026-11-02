@@ -1,0 +1,1 @@
+<?php $title = 'Page not found'; ?><section class="mx-auto max-w-3xl px-5 py-24 text-center"><p class="eyebrow">404</p><h1 class="mt-3 font-display text-4xl font-bold">That page isn’t here.</h1><a class="mt-5 inline-block underline" href="<?= h(url('home')) ?>">Back to courts</a></section>
